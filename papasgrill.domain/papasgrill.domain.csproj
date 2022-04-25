@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\papasgrill.core\papasgrill.core.csproj" />
+    <ProjectReference Include="..\papasgrill.models\papasgrill.models.csproj" />
+  </ItemGroup>
+
 </Project>

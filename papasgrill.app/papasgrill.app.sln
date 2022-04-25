@@ -3,15 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "papasgrill.app", "papasgrill.app.csproj", "{E4B3A66B-D345-453A-B85B-50C758703259}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "papasgrill.app", "papasgrill.app.csproj", "{FD074286-71D5-4720-9F17-E25D9F50BE95}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AB257400-B953-453C-8765-5C9A1760B387} = {AB257400-B953-453C-8765-5C9A1760B387}
+		{DBEAAF27-9EF6-4026-9528-ECF72A05ADC7} = {DBEAAF27-9EF6-4026-9528-ECF72A05ADC7}
+		{757D3341-2BDE-4FF9-859C-B3E61AA71FA4} = {757D3341-2BDE-4FF9-859C-B3E61AA71FA4}
+		{0FA352A9-46DA-40AB-8F15-D976EACBA97B} = {0FA352A9-46DA-40AB-8F15-D976EACBA97B}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "papasgrill.models", "..\papasgrill.models\papasgrill.models.csproj", "{AAC02261-42A9-4798-BB51-37513E29D65D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "papasgrill.core", "..\papasgrill.core\papasgrill.core.csproj", "{DBEAAF27-9EF6-4026-9528-ECF72A05ADC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "papasgrill.utility", "..\papasgrill.utility\papasgrill.utility.csproj", "{51BEA338-DA0D-4E74-8E81-BF541CD6C7F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "papasgrill.domain", "..\papasgrill.domain\papasgrill.domain.csproj", "{AB257400-B953-453C-8765-5C9A1760B387}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "papasgrill.core", "..\papasgrill.core\papasgrill.core.csproj", "{65D2AB30-A9F3-4341-BA4D-109E145D58EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "papasgrill.models", "..\papasgrill.models\papasgrill.models.csproj", "{757D3341-2BDE-4FF9-859C-B3E61AA71FA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "papasgrill.domain", "..\papasgrill.domain\papasgrill.domain.csproj", "{F8A14C6B-54EC-46FE-9659-61A36C4FB0F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "papasgrill.utility", "..\papasgrill.utility\papasgrill.utility.csproj", "{0FA352A9-46DA-40AB-8F15-D976EACBA97B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,31 +25,31 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E4B3A66B-D345-453A-B85B-50C758703259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E4B3A66B-D345-453A-B85B-50C758703259}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E4B3A66B-D345-453A-B85B-50C758703259}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E4B3A66B-D345-453A-B85B-50C758703259}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AAC02261-42A9-4798-BB51-37513E29D65D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AAC02261-42A9-4798-BB51-37513E29D65D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AAC02261-42A9-4798-BB51-37513E29D65D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AAC02261-42A9-4798-BB51-37513E29D65D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{51BEA338-DA0D-4E74-8E81-BF541CD6C7F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{51BEA338-DA0D-4E74-8E81-BF541CD6C7F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{51BEA338-DA0D-4E74-8E81-BF541CD6C7F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{51BEA338-DA0D-4E74-8E81-BF541CD6C7F8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{65D2AB30-A9F3-4341-BA4D-109E145D58EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65D2AB30-A9F3-4341-BA4D-109E145D58EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65D2AB30-A9F3-4341-BA4D-109E145D58EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65D2AB30-A9F3-4341-BA4D-109E145D58EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F8A14C6B-54EC-46FE-9659-61A36C4FB0F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8A14C6B-54EC-46FE-9659-61A36C4FB0F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8A14C6B-54EC-46FE-9659-61A36C4FB0F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8A14C6B-54EC-46FE-9659-61A36C4FB0F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD074286-71D5-4720-9F17-E25D9F50BE95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD074286-71D5-4720-9F17-E25D9F50BE95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD074286-71D5-4720-9F17-E25D9F50BE95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD074286-71D5-4720-9F17-E25D9F50BE95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBEAAF27-9EF6-4026-9528-ECF72A05ADC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBEAAF27-9EF6-4026-9528-ECF72A05ADC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBEAAF27-9EF6-4026-9528-ECF72A05ADC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBEAAF27-9EF6-4026-9528-ECF72A05ADC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB257400-B953-453C-8765-5C9A1760B387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB257400-B953-453C-8765-5C9A1760B387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB257400-B953-453C-8765-5C9A1760B387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB257400-B953-453C-8765-5C9A1760B387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{757D3341-2BDE-4FF9-859C-B3E61AA71FA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{757D3341-2BDE-4FF9-859C-B3E61AA71FA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{757D3341-2BDE-4FF9-859C-B3E61AA71FA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{757D3341-2BDE-4FF9-859C-B3E61AA71FA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FA352A9-46DA-40AB-8F15-D976EACBA97B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FA352A9-46DA-40AB-8F15-D976EACBA97B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FA352A9-46DA-40AB-8F15-D976EACBA97B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FA352A9-46DA-40AB-8F15-D976EACBA97B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {75D64ADA-87C5-4A38-930D-8B3051868EFF}
+		SolutionGuid = {12A07841-F9DF-4B3A-B9BC-D1CD005A442B}
 	EndGlobalSection
 EndGlobal
