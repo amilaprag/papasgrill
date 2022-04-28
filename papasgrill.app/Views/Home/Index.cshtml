@@ -1,8 +1,76 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@using papasgrill.models.ViewModels
+@using Newtonsoft.Json
+@model HomeViewModel
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@{
+    ViewData["Title"] = "Home Page";
+    ViewData["FoodViewModels"] = @Model.FoodViewModels; 
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+     $( document ).ready(function() {
+            console.log( "ready!" );
+            selectFoods(1);
+     });
+     function selectFoods(id) {
+          var url = "/Home/Foods";
+
+                 $.ajax({
+                     url: url,
+                     cache: false,
+                     type: "POST",
+                     data: { foodViewModel:@Json.Serialize(Model.FoodViewModels), categoryId : id },
+                     success: function (data) {
+                         
+                         $('#divPartial').html(data);
+                         /* little fade in effect */
+                         $('#divPartial').fadeIn('fast');
+                     },
+                     error: function (reponse) {
+                         console.log(reponse);
+                         alert("error : " + reponse);
+                     }
+                 });
+    }
+</script>
+
+<style>
+    .float-container {
+        border: 3px solid #fff;
+        padding: 100px;
+        width: 100%;
+    }
+
+    .float-child {
+        width: 50%;
+        float: left;
+        padding: 20px;
+        border: 2px solid red;
+    }
+
+    li.list-group-item:hover {
+        background: aqua;
+    }
+</style>
+
+<div class="float-container">
+    <div class="float-child">
+        <ul class="list-group">
+            @if (Model.CategoryViewModels != null)
+            {
+                foreach (var category in Model.CategoryViewModels)
+                {
+                    <li class="list-group-item cursor: default;" onclick=selectFoods(@category.Id)> @category.Category?.Name</li>
+                }
+            }
+        </ul>
+    </div>
 </div>
+
+<div class="float-child">
+    <div class="blue">
+        <div id="divPartial" />
+    </div>
+</div>
+

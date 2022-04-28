@@ -1,0 +1,9 @@
+﻿
+@model IEnumerable<papasgrill.models.ViewModels.FoodViewModel>
+
+@foreach (var item in Model)
+{
+ <ul class="list-group">
+  <li class="list-group-item">@item.Food?.Name</li>
+</ul>
+}
