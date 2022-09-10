@@ -1,0 +1,31 @@
+name: .NET
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore papasgrill.app/papasgrill.app.csproj
+    - name: Build
+      run: dotnet build papasgrill.app/papasgrill.app.csproj 
+#   - name: Test
+#     run: dotnet test --no-build --verbosity normal
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.2
+      with:
+       name: api
+       path:  papasgrill.app
+       if-no-files-found: error
