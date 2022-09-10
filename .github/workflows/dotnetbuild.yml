@@ -27,5 +27,5 @@ jobs:
       uses: actions/upload-artifact@v2.2.2
       with:
        name: api
-       path:  papasgrill.app/papasgrill.app/**
+       path:  build
        if-no-files-found: error
