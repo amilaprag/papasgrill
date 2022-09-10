@@ -21,5 +21,5 @@ jobs:
       run: dotnet restore papasgrill.app/papasgrill.app.csproj
     - name: Build
       run: dotnet build papasgrill.app/papasgrill.app.csproj 
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+#     - name: Test
+#       run: dotnet test --no-build --verbosity normal
